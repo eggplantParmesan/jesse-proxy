@@ -12,21 +12,29 @@
   <div id="Nav">Nav</div>
   <div id="ProductInfo">ProductInfo</div>
   <div id="Checkout"></div>
-  <div id="SimilarProducts">SimilarProducts</div>
+  <div id="relateditems"></div>
   <div id="Reviews"></div>
   <script src="/lib/react.development.js"></script>
   <script src="/lib/react-dom.development.js"></script>
   <script src="https://s3-us-west-1.amazonaws.com/avh-fec-component/bundle.js"></script>
   <script src="https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/bundle/bundle.js"></script>
+  <script src="https://s3.amazonaws.com/fec-proxy/bundle.js"></script>
+
   <script>
     ReactDOM.render(
-      React.createElement(Checkout, null, null),
+      React.createElement(Checkout),
       document.getElementById('Checkout')
     );
   </script>
   <script>
     ReactDOM.render(
-      React.createElement(Reviews, null, null),
+      React.createElement(relatedItems),
+      document.getElementById('relateditems')
+    );
+  </script>
+  <script>
+    ReactDOM.render(
+      React.createElement(Reviews),
       document.getElementById('Reviews')
     );
   </script>
@@ -34,3 +42,4 @@
 
 </html>
 <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+<!-- Ports: AVH 1337, Matt 7777, Sonia 4042, Michelle? -->
