@@ -1,19 +1,16 @@
 {
-  "name": "proxy-avincenthill",
+  "name": "FECdemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon ./server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/8-bit-beauty/proxy-avincenthill.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/8-bit-beauty/proxy-avincenthill/issues"
-  },
-  "homepage": "https://github.com/8-bit-beauty/proxy-avincenthill#readme"
+  "dependencies": {
+    "morgan": "^1.9.0",
+    "express": "^4.16.2"
+  }
 }
