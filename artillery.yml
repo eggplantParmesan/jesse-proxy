@@ -1,0 +1,19 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+    #   rampTo: 2000
+    # - duration: 60
+    #   arrivalRate: 3500
+
+scenarios:
+  - flow:
+    - loop: 
+      - get:
+          url: "/product/product/{{ $randomNumber(1, 10000) }}"
+      - get:
+          url: "/product/product/{{ $randomNumber(10000, 20000) }}"
+      - get:
+          url: "/product/product/{{ $randomNumber(20000, 30000) }}"
+        count: 800
