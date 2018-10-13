@@ -1,5 +1,6 @@
 require("newrelic");
 require("dotenv").config();
+const client = require("../component-sonia/server/redis.js");
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
@@ -10,7 +11,7 @@ const proxy = require("express-http-proxy");
 
 app.use(morgan("dev"));
 app.use("/:id", express.static(path.join(__dirname, "public")));
-app.use("/product", proxy("http://localhost:4043"));
+app.use("/product", proxy("ec2-18-232-61-178.compute-1.amazonaws.com:4043"));
 
 // // AVH
 // app.get("/api/reviews/:productId", (req, res) => {
