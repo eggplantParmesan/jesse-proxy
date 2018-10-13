@@ -1,6 +1,6 @@
 require("newrelic");
-require("dotenv").config();
-const client = require("../component-sonia/server/redis.js");
+// require("dotenv").config();
+// const client = require("../component-sonia/server/redis.js");
 const express = require("express");
 const morgan = require("morgan");
 const path = require("path");
